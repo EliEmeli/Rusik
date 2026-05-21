@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial,sans-serif;
+    transition:0.3s;
+}
+
+header{
+    background:#111827;
+    padding:20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+nav input{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    width:250px;
+}
+
+#themeToggle{
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#7c3aed;
+    color:white;
+}
+
+.hero-banner{
+    padding:80px 20px;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1400')
+    center/cover;
+}
+
+.hero-banner h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.heroes-section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:40px;
+}
+
+.hero-card{
+    background:#1e293b;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-card:hover{
+    transform:translateY(-10px);
+}
+
+.hero-card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.hero-card h3{
+    margin-top:10px;
+}
+
+.info-section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px;
+}
+
+#heroInfo{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+}
+
+#heroInfo h2{
+    margin-bottom:20px;
+}
+
+.build{
+    margin-top:20px;
+}
+
+.build ul{
+    margin-left:20px;
+    margin-top:10px;
+}
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+.light-theme{
+    background:#f1f5f9;
+    color:black;
+}
+
+.light-theme .hero-card,
+.light-theme #heroInfo{
+    background:white;
+    color:black;
+}
+
+@media(max-width:700px){
+
+    .hero-banner h2{
+        font-size:32px;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+}
