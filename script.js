@@ -2,614 +2,234 @@ const heroes = {
 
 "Juggernaut": {
 role:"Carry",
-skills:[
-"Blade Fury",
-"Healing Ward",
-"Blade Fury",
-"Stats",
-"Blade Fury",
-"Omnislash"
-],
-items:[
-"Phase Boots",
-"Battle Fury",
-"Manta Style",
-"Butterfly",
-"Aghanim's Scepter"
-]
+skills:["Blade Fury","Healing Ward","Omnislash"],
+items:["Battle Fury","Manta","Butterfly"]
 },
 
 "Phantom Assassin": {
 role:"Carry",
-skills:[
-"Stifling Dagger",
-"Phantom Strike",
-"Stifling Dagger",
-"Blur",
-"Stifling Dagger",
-"Coup De Grace"
-],
-items:[
-"Battle Fury",
-"Desolator",
-"BKB",
-"Basher",
-"Abyssal Blade"
-]
+skills:["Dagger","Blink Strike","Crit"],
+items:["Battle Fury","Desolator","Abyssal"]
 },
 
 "Anti-Mage": {
 role:"Carry",
-skills:[
-"Blink",
-"Mana Break",
-"Blink",
-"Counterspell",
-"Blink",
-"Mana Void"
-],
-items:[
-"Battle Fury",
-"Manta Style",
-"Butterfly",
-"Skadi",
-"Abyssal Blade"
-]
+skills:["Mana Break","Blink","Mana Void"],
+items:["Battle Fury","Manta","Skadi"]
 },
 
 "Faceless Void": {
 role:"Carry",
-skills:[
-"Time Walk",
-"Time Lock",
-"Time Lock",
-"Backtrack",
-"Time Lock",
-"Chronosphere"
-],
-items:[
-"Maelstrom",
-"Manta Style",
-"BKB",
-"Butterfly",
-"Satanic"
-]
+skills:["Time Walk","Time Lock","Chrono"],
+items:["MKB","Manta","Butterfly"]
 },
 
 "Ursa": {
 role:"Carry",
-skills:[
-"Earthshock",
-"Overpower",
-"Fury Swipes",
-"Overpower",
-"Overpower",
-"Enrage"
-],
-items:[
-"Battle Fury",
-"Blink Dagger",
-"BKB",
-"Abyssal Blade",
-"Satanic"
-]
+skills:["Earthshock","Fury Swipes","Enrage"],
+items:["Blink","Abyssal","Satanic"]
 },
 
 "Spectre": {
 role:"Carry",
-skills:[
-"Spectral Dagger",
-"Desolate",
-"Spectral Dagger",
-"Dispersion",
-"Spectral Dagger",
-"Haunt"
-],
-items:[
-"Blade Mail",
-"Radiance",
-"Manta Style",
-"Skadi",
-"Abyssal Blade"
-]
+skills:["Dagger","Dispersion","Haunt"],
+items:["Radiance","Manta","Skadi"]
 },
 
 "Invoker": {
 role:"Mid",
-skills:[
-"Quas",
-"Exort",
-"Exort",
-"Wex",
-"Exort",
-"Sun Strike"
-],
-items:[
-"Bottle",
-"Travel Boots",
-"Witch Blade",
-"BKB",
-"Hex"
-]
+skills:["Quas","Exort","Sun Strike"],
+items:["Witch Blade","BKB","Hex"]
 },
 
 "Shadow Fiend": {
 role:"Mid",
-skills:[
-"Shadowraze",
-"Necromastery",
-"Shadowraze",
-"Presence",
-"Shadowraze",
-"Requiem"
-],
-items:[
-"Bottle",
-"Dragon Lance",
-"BKB",
-"Daedalus",
-"Silver Edge"
-]
+skills:["Raze","Necromastery","Requiem"],
+items:["BKB","Daedalus","Shadow Blade"]
 },
 
 "Storm Spirit": {
 role:"Mid",
-skills:[
-"Remnant",
-"Overload",
-"Remnant",
-"Vortex",
-"Remnant",
-"Ball Lightning"
-],
-items:[
-"Bottle",
-"Orchid",
-"BKB",
-"Shiva's Guard",
-"Bloodthorn"
-]
+skills:["Remnant","Vortex","Ball Lightning"],
+items:["Orchid","BKB","Shiva"]
 },
 
 "Templar Assassin": {
 role:"Mid",
-skills:[
-"Refraction",
-"Psi Blades",
-"Refraction",
-"Meld",
-"Refraction",
-"Trap"
-],
-items:[
-"Dragon Lance",
-"Desolator",
-"Blink",
-"BKB",
-"Daedalus"
-]
-},
-
-"Puck": {
-role:"Mid",
-skills:[
-"Orb",
-"Rift",
-"Orb",
-"Phase Shift",
-"Orb",
-"Dream Coil"
-],
-items:[
-"Blink",
-"Witch Blade",
-"Linken's",
-"Shiva",
-"Octarine"
-]
+skills:["Refraction","Meld","Traps"],
+items:["Desolator","Blink","BKB"]
 },
 
 "Lina": {
 role:"Mid",
-skills:[
-"Dragon Slave",
-"Fiery Soul",
-"Dragon Slave",
-"Light Strike",
-"Dragon Slave",
-"Laguna Blade"
-],
-items:[
-"Travel Boots",
-"BKB",
-"Daedalus",
-"Silver Edge",
-"Satanic"
-]
+skills:["Dragon Slave","Light Strike","Laguna"],
+items:["BKB","Daedalus","Travel Boots"]
+},
+
+"Puck": {
+role:"Mid",
+skills:["Orb","Silence","Dream Coil"],
+items:["Witch Blade","Blink","Shiva"]
 },
 
 "Axe": {
 role:"Offlane",
-skills:[
-"Call",
-"Helix",
-"Helix",
-"Hunger",
-"Helix",
-"Culling Blade"
-],
-items:[
-"Blink",
-"Blade Mail",
-"Pipe",
-"Shiva",
-"Heart"
-]
+skills:["Call","Spin","Culling Blade"],
+items:["Blink","Blade Mail","Shiva"]
 },
 
 "Mars": {
 role:"Offlane",
-skills:[
-"Spear",
-"Rebuke",
-"Rebuke",
-"Bulwark",
-"Rebuke",
-"Arena"
-],
-items:[
-"Blink",
-"Soul Ring",
-"BKB",
-"Refresher",
-"Shiva"
-]
+skills:["Spear","Arena","Bulwark"],
+items:["Blink","BKB","Refresher"]
 },
 
 "Tidehunter": {
 role:"Offlane",
-skills:[
-"Anchor Smash",
-"Kraken Shell",
-"Anchor Smash",
-"Gush",
-"Anchor Smash",
-"Ravage"
-],
-items:[
-"Blink",
-"Pipe",
-"Lotus Orb",
-"Refresher",
-"Shiva"
-]
+skills:["Anchor Smash","Gush","Ravage"],
+items:["Blink","Pipe","Refresher"]
 },
 
 "Slardar": {
 role:"Offlane",
-skills:[
-"Crush",
-"Bash",
-"Bash",
-"Sprint",
-"Bash",
-"Corrosive Haze"
-],
-items:[
-"Blink",
-"BKB",
-"Shard",
-"AC",
-"Heart"
-]
+skills:["Stun","Bash","Corrosive"],
+items:["Blink","BKB","AC"]
 },
 
 "Centaur Warrunner": {
 role:"Offlane",
-skills:[
-"Stomp",
-"Retaliate",
-"Retaliate",
-"Double Edge",
-"Retaliate",
-"Stampede"
-],
-items:[
-"Blink",
-"Pipe",
-"Heart",
-"Crimson Guard",
-"Shiva"
-]
+skills:["Stomp","Double Edge","Stampede"],
+items:["Blink","Heart","Pipe"]
 },
 
 "Underlord": {
 role:"Offlane",
-skills:[
-"Firestorm",
-"Pit",
-"Firestorm",
-"Atrophy Aura",
-"Firestorm",
-"Dark Rift"
-],
-items:[
-"Greaves",
-"Pipe",
-"Lotus Orb",
-"Shiva",
-"Heart"
-]
+skills:["Firestorm","Pit","Dark Rift"],
+items:["Greaves","Pipe","Shiva"]
 },
 
 "Crystal Maiden": {
 role:"Support",
-skills:[
-"Nova",
-"Frostbite",
-"Nova",
-"Aura",
-"Nova",
-"Freezing Field"
-],
-items:[
-"Tranquils",
-"Glimmer",
-"Force Staff",
-"BKB",
-"Aghanim"
-]
+skills:["Nova","Frostbite","Freezing Field"],
+items:["Glimmer","Force Staff","Aether"]
 },
 
 "Lion": {
 role:"Support",
-skills:[
-"Spike",
-"Hex",
-"Mana Drain",
-"Spike",
-"Spike",
-"Finger"
-],
-items:[
-"Blink",
-"Force Staff",
-"Aether Lens",
-"Aeon Disk",
-"Shard"
-]
+skills:["Hex","Mana Drain","Finger"],
+items:["Blink","Force Staff","Aether"]
 },
 
 "Witch Doctor": {
 role:"Support",
-skills:[
-"Cask",
-"Maledict",
-"Maledict",
-"Voodoo",
-"Maledict",
-"Death Ward"
-],
-items:[
-"Glimmer",
-"Aghanim",
-"Force Staff",
-"BKB",
-"Shard"
-]
-},
-
-"Jakiro": {
-role:"Support",
-skills:[
-"Dual Breath",
-"Ice Path",
-"Dual Breath",
-"Liquid Fire",
-"Dual Breath",
-"Macropyre"
-],
-items:[
-"Eul",
-"Force Staff",
-"Greaves",
-"Shiva",
-"Octarine"
-]
+skills:["Cask","Maledict","Death Ward"],
+items:["Glimmer","Aghanim","Force Staff"]
 },
 
 "Shadow Shaman": {
 role:"Support",
-skills:[
-"Ether Shock",
-"Hex",
-"Shock",
-"Shackles",
-"Shock",
-"Wards"
-],
-items:[
-"Blink",
-"Aether Lens",
-"Force Staff",
-"Shard",
-"Refresher"
-]
+skills:["Hex","Shackles","Wards"],
+items:["Blink","Aether","Refresher"]
 },
 
 "Dazzle": {
 role:"Support",
-skills:[
-"Poison Touch",
-"Shadow Wave",
-"Wave",
-"Bad Juju",
-"Wave",
-"Shard"
-],
-items:[
-"Greaves",
-"Glimmer",
-"Force Staff",
-"Lotus Orb",
-"Shard"
-]
+skills:["Heal","Poison Touch","Grave"],
+items:["Greaves","Glimmer","Lotus"]
 },
 
 "Pudge": {
-role:"Roamer",
-skills:[
-"Hook",
-"Rot",
-"Hook",
-"Heap",
-"Hook",
-"Dismember"
-],
-items:[
-"Blink",
-"Aether Lens",
-"Lotus Orb",
-"Wind Waker",
-"Shard"
-]
+role:"Roam",
+skills:["Hook","Rot","Dismember"],
+items:["Blink","Aether","Lotus"]
 },
 
 "Spirit Breaker": {
-role:"Roamer",
-skills:[
-"Charge",
-"Bash",
-"Bash",
-"Bulldoze",
-"Bash",
-"Nether Strike"
-],
-items:[
-"Phase Boots",
-"Shadow Blade",
-"BKB",
-"Lotus Orb",
-"Heart"
-]
+role:"Roam",
+skills:["Charge","Bash","Ult"],
+items:["Shadow Blade","BKB","Heart"]
 },
 
 "Earth Spirit": {
-role:"Roamer",
-skills:[
-"Boulder",
-"Grip",
-"Boulder",
-"Silence",
-"Boulder",
-"Magnetize"
-],
-items:[
-"Urn",
-"Spirit Vessel",
-"BKB",
-"Shiva",
-"Lotus Orb"
-]
-},
-
-"Bounty Hunter": {
-role:"Roamer",
-skills:[
-"Shuriken",
-"Jinada",
-"Jinada",
-"Shadow Walk",
-"Jinada",
-"Track"
-],
-items:[
-"Phase Boots",
-"Solar Crest",
-"Lotus Orb",
-"BKB",
-"Aghanim"
-]
+role:"Roam",
+skills:["Roll","Silence","Stun"],
+items:["Vessel","BKB","Shiva"]
 },
 
 "Mirana": {
-role:"Roamer",
-skills:[
-"Arrow",
-"Leap",
-"Arrow",
-"Starstorm",
-"Arrow",
-"Moonlight"
-],
-items:[
-"Spirit Vessel",
-"Eul",
-"Lotus Orb",
-"Gleipnir",
-"Linken's"
-]
+role:"Roam",
+skills:["Arrow","Leap","Starfall"],
+items:["Vessel","Eul","Gleipnir"]
 },
 
-"Нурланов Сасур": {
-role:"Kazakh Boss",
-skills:[
-"Казахский разнос",
-"AirWave",
-"VIP Aura",
-"Воздушный удар",
-"MAX Воздухан",
-"Ульта: Астана Gaming"
-],
-items:[
-"VIP Казаха",
-"Воздухан",
-"Boots of Respect",
-"BKB",
-"Aghanim AirLines"
-]
+"Bounty Hunter": {
+role:"Roam",
+skills:["Track","Jinada","Invis"],
+items:["Solar Crest","Lotus","BKB"]
+},
+
+// 😂 MEME HEROES
+"Ilya Smurf": {
+role:"Meme Mid",
+skills:["Pause abuse","Tilt enemy","GG call"],
+items:["Midas","Boots of Travel","Rapier"]
+},
+
+"Nigma Streamer": {
+role:"Meme Carry",
+skills:["Farm jungle","Ignore team","AFK split"],
+items:["Battle Fury","Manta","Skadi"]
 }
 
 };
 
-function showHero(hero){
+// ===== UI =====
 
-const data = heroes[hero];
+function createHero(name){
 
-document.getElementById("heroInfo").innerHTML = `
+const el = document.createElement("div");
+el.className = "hero";
 
-<h2>${hero}</h2>
+el.innerHTML = `
+<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/${name.toLowerCase().replace(/ /g,'_')}.png">
+<b>${name}</b>
+`;
 
-<p><strong>Роль:</strong> ${data.role}</p>
+el.onclick = () => showHero(name);
 
-<div class="build">
+return el;
 
-<h3>Skill Build</h3>
+}
 
-<ul>
+function showHero(name){
 
-${data.skills.map(skill =>
-`<li>${skill}</li>`
-).join('')}
+const h = heroes[name];
 
-</ul>
+document.getElementById("panel").innerHTML = `
 
-</div>
+<h2>${name}</h2>
+<p><b>Role:</b> ${h.role}</p>
 
-<div class="build">
+<h3>Skills</h3>
+<ul>${h.skills.map(s=>`<li>${s}</li>`).join("")}</ul>
 
-<h3>Item Build</h3>
-
-<ul>
-
-${data.items.map(item =>
-`<li>${item}</li>`
-).join('')}
-
-</ul>
-
-</div>
+<h3>Items</h3>
+<ul>${h.items.map(i=>`<li>${i}</li>`).join("")}</ul>
 
 `;
 
 }
+
+// ===== render =====
+
+Object.keys(heroes).forEach(name => {
+
+const hero = createHero(name);
+
+if(heroes[name].role.includes("Carry")) carry.appendChild(hero);
+else if(heroes[name].role.includes("Mid")) mid.appendChild(hero);
+else if(heroes[name].role.includes("Offlane")) offlane.appendChild(hero);
+else if(heroes[name].role.includes("Support")) support.appendChild(hero);
+else roam.appendChild(hero);
+
+});
