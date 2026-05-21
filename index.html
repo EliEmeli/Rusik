@@ -2,51 +2,92 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dota Meta Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dota 2 Meta Guide</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-  <nav>
-    <h1>Dota Meta Guide</h1>
-
-    <input type="text" id="searchInput" placeholder="Поиск героя...">
-
-    <button id="themeToggle">Сменить тему</button>
-  </nav>
+  <h1>Dota 2 Meta Guide</h1>
+  <p>Лучшие герои для каждой позиции</p>
 </header>
 
-<section class="hero-banner">
+<section class="roles-container">
 
-  <h2>Dota 2 Meta Heroes</h2>
+  <div class="role-column">
+    <h2>Carry</h2>
 
-  <p>Актуальные билды, роли и мета героев</p>
+    <button onclick="showHero('Juggernaut')">Juggernaut</button>
+    <button onclick="showHero('Phantom Assassin')">Phantom Assassin</button>
+    <button onclick="showHero('Anti-Mage')">Anti-Mage</button>
+    <button onclick="showHero('Faceless Void')">Faceless Void</button>
+    <button onclick="showHero('Ursa')">Ursa</button>
+    <button onclick="showHero('Spectre')">Spectre</button>
 
-</section>
+  </div>
 
-<section class="heroes-section" id="heroesContainer">
+  <div class="role-column">
+    <h2>Mid</h2>
 
-</section>
+    <button onclick="showHero('Invoker')">Invoker</button>
+    <button onclick="showHero('Shadow Fiend')">Shadow Fiend</button>
+    <button onclick="showHero('Storm Spirit')">Storm Spirit</button>
+    <button onclick="showHero('Templar Assassin')">Templar Assassin</button>
+    <button onclick="showHero('Puck')">Puck</button>
+    <button onclick="showHero('Lina')">Lina</button>
 
-<section class="info-section">
+  </div>
 
-  <div id="heroInfo">
+  <div class="role-column">
+    <h2>Offlane</h2>
 
-    <h2>Выбери героя</h2>
+    <button onclick="showHero('Axe')">Axe</button>
+    <button onclick="showHero('Mars')">Mars</button>
+    <button onclick="showHero('Tidehunter')">Tidehunter</button>
+    <button onclick="showHero('Slardar')">Slardar</button>
+    <button onclick="showHero('Centaur Warrunner')">Centaur</button>
+    <button onclick="showHero('Underlord')">Underlord</button>
 
-    <p>Информация о герое появится здесь.</p>
+  </div>
+
+  <div class="role-column">
+    <h2>Support</h2>
+
+    <button onclick="showHero('Crystal Maiden')">Crystal Maiden</button>
+    <button onclick="showHero('Lion')">Lion</button>
+    <button onclick="showHero('Witch Doctor')">Witch Doctor</button>
+    <button onclick="showHero('Jakiro')">Jakiro</button>
+    <button onclick="showHero('Shadow Shaman')">Shadow Shaman</button>
+    <button onclick="showHero('Dazzle')">Dazzle</button>
+
+  </div>
+
+  <div class="role-column">
+    <h2>Roamer</h2>
+
+    <button onclick="showHero('Pudge')">Pudge</button>
+    <button onclick="showHero('Spirit Breaker')">Spirit Breaker</button>
+    <button onclick="showHero('Earth Spirit')">Earth Spirit</button>
+    <button onclick="showHero('Bounty Hunter')">Bounty Hunter</button>
+    <button onclick="showHero('Mirana')">Mirana</button>
+    <button onclick="showHero('Нурланов Сасур')">Нурланов Сасур</button>
 
   </div>
 
 </section>
 
-<footer>
+<section class="hero-info">
 
-  <p>© 2026 Dota Meta Guide</p>
+  <div id="heroInfo">
 
-</footer>
+    <h2>Выбери героя</h2>
+
+    <p>Здесь появится билд.</p>
+
+  </div>
+
+</section>
 
 <script src="script.js"></script>
 
