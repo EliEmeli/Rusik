@@ -1,7 +1,7 @@
 body{
   margin:0;
   font-family:Arial;
-  background:#0f172a;
+  background:#0b1220;
   color:white;
   text-align:center;
 }
@@ -20,13 +20,13 @@ h1{
 .col{
   background:#1e293b;
   padding:10px;
-  border-radius:10px;
+  border-radius:12px;
 }
 
 .hero{
   background:#334155;
-  margin:5px 0;
-  padding:5px;
+  margin:6px 0;
+  padding:6px;
   border-radius:8px;
   cursor:pointer;
   transition:0.2s;
@@ -46,5 +46,5 @@ h1{
   margin:20px;
   padding:20px;
   background:#111827;
-  border-radius:10px;
+  border-radius:12px;
 }

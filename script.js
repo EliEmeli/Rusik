@@ -3,31 +3,31 @@ const heroes = {
 "Juggernaut": {
 role:"Carry",
 skills:["Blade Fury","Healing Ward","Omnislash"],
-items:["Battle Fury","Manta","Butterfly"]
+items:["Battle Fury","Manta Style","Butterfly"]
 },
 
 "Phantom Assassin": {
 role:"Carry",
 skills:["Dagger","Blink Strike","Crit"],
-items:["Battle Fury","Desolator","Abyssal"]
+items:["Battle Fury","Desolator","Abyssal Blade"]
 },
 
 "Anti-Mage": {
 role:"Carry",
 skills:["Mana Break","Blink","Mana Void"],
-items:["Battle Fury","Manta","Skadi"]
+items:["Battle Fury","Manta Style","Skadi"]
 },
 
 "Faceless Void": {
 role:"Carry",
-skills:["Time Walk","Time Lock","Chrono"],
-items:["MKB","Manta","Butterfly"]
+skills:["Time Walk","Time Lock","Chronosphere"],
+items:["Maelstrom","Manta","Butterfly"]
 },
 
 "Ursa": {
 role:"Carry",
 skills:["Earthshock","Fury Swipes","Enrage"],
-items:["Blink","Abyssal","Satanic"]
+items:["Blink","Abyssal Blade","Satanic"]
 },
 
 "Spectre": {
@@ -60,16 +60,16 @@ skills:["Refraction","Meld","Traps"],
 items:["Desolator","Blink","BKB"]
 },
 
-"Lina": {
-role:"Mid",
-skills:["Dragon Slave","Light Strike","Laguna"],
-items:["BKB","Daedalus","Travel Boots"]
-},
-
 "Puck": {
 role:"Mid",
 skills:["Orb","Silence","Dream Coil"],
 items:["Witch Blade","Blink","Shiva"]
+},
+
+"Lina": {
+role:"Mid",
+skills:["Dragon Slave","Light Strike","Laguna"],
+items:["BKB","Daedalus","Travel Boots"]
 },
 
 "Axe": {
@@ -96,7 +96,7 @@ skills:["Stun","Bash","Corrosive"],
 items:["Blink","BKB","AC"]
 },
 
-"Centaur Warrunner": {
+"Centaur": {
 role:"Offlane",
 skills:["Stomp","Double Edge","Stampede"],
 items:["Blink","Heart","Pipe"]
@@ -110,7 +110,7 @@ items:["Greaves","Pipe","Shiva"]
 
 "Crystal Maiden": {
 role:"Support",
-skills:["Nova","Frostbite","Freezing Field"],
+skills:["Nova","Frostbite","Ult"],
 items:["Glimmer","Force Staff","Aether"]
 },
 
@@ -134,7 +134,7 @@ items:["Blink","Aether","Refresher"]
 
 "Dazzle": {
 role:"Support",
-skills:["Heal","Poison Touch","Grave"],
+skills:["Heal","Poison","Grave"],
 items:["Greaves","Glimmer","Lotus"]
 },
 
@@ -169,21 +169,37 @@ items:["Solar Crest","Lotus","BKB"]
 },
 
 // 😂 MEME HEROES
-"Ilya Smurf": {
-role:"Meme Mid",
-skills:["Pause abuse","Tilt enemy","GG call"],
-items:["Midas","Boots of Travel","Rapier"]
+"Papich": {
+role:"AFK Carry",
+skills:["Farm 60 min","Tilt team","EZ game"],
+items:["Battle Fury","Manta","Shadow Blade"]
 },
 
-"Nigma Streamer": {
-role:"Meme Carry",
-skills:["Farm jungle","Ignore team","AFK split"],
-items:["Battle Fury","Manta","Skadi"]
+"Old God": {
+role:"Mid Legend",
+skills:["Smurf IQ","One shot","Mind control"],
+items:["Blink","Daedalus","Refresher"]
+},
+
+"322 Analyst": {
+role:"Support Ruiner",
+skills:["Strange build","Throw game","Report team"],
+items:["Midas","Aghanim","Force Staff"]
+},
+
+"AFK Jungle Spirit": {
+role:"Hidden Carry",
+skills:["Farm jungle","Never join fight","Scale forever"],
+items:["Battle Fury","Skadi","Satanic"]
+},
+
+"Global Pause Master": {
+role:"Meme Support",
+skills:["Pause abuse","Tilt enemy","GG call early"],
+items:["Blink","Force Staff","Wind Waker"]
 }
 
 };
-
-// ===== UI =====
 
 function createHero(name){
 
@@ -220,7 +236,7 @@ document.getElementById("panel").innerHTML = `
 
 }
 
-// ===== render =====
+// ===== render into columns =====
 
 Object.keys(heroes).forEach(name => {
 
@@ -230,6 +246,6 @@ if(heroes[name].role.includes("Carry")) carry.appendChild(hero);
 else if(heroes[name].role.includes("Mid")) mid.appendChild(hero);
 else if(heroes[name].role.includes("Offlane")) offlane.appendChild(hero);
 else if(heroes[name].role.includes("Support")) support.appendChild(hero);
-else roam.appendChild(hero);
+else meme.appendChild(hero);
 
 });
