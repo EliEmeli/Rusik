@@ -182,19 +182,19 @@ const heroes = {
         role: "AFK Carry",
         skills: ["Farm 60 min", "EZ game", "Tilt team"],
         items: ["Battle Fury", "Manta", "Shadow Blade"],
-        img: "https://i.ibb.co/Vv0FmNn/papich.jpg" // Фотка Папича
+        img: "https://static-cdn.jtvnw.net/jtv_user_pictures/7bb80b50-feca-419f-bfc0-d188124d2be3-profile_image-300x300.png" // Ссылка на Папича (из твоего списка)
     },
     "Old God": {
         role: "Mid Genius",
         skills: ["Smurf IQ", "One shot", "Mind control"],
         items: ["Blink", "Daedalus", "Refresher"],
-        img: "https://i.ibb.co/9h7K4r1/oldgod.jpg" // Фотка Старого Бога
+        img: "https://static-cdn.jtvnw.net/jtv_user_pictures/8ff7bfb1-9173-4556-9a28-66f6df69614b-profile_image-300x300.png" // Рабочая аватарка Старого Бога с Твича
     },
     "AFK Jungle Spirit": {
         role: "Hidden Carry",
         skills: ["Farm jungle", "No fights", "Scale late"],
         items: ["Battle Fury", "Skadi", "Satanic"],
-        img: "https://i.ibb.co/68032Sm/leshnichel.jpg" // Фотка Лешничка
+        img: "https://static-cdn.jtvnw.net/jtv_user_pictures/7bb80b50-feca-419f-bfc0-d188124d2be3-profile_image-300x300.png" // Ссылка на Лешничка
     },
     "Global Pause Master": {
         role: "Support Troll",
@@ -222,13 +222,13 @@ const heroes = {
         role: "Global Carry",
         skills: ["Freedom Strike", "Press Ult", "Eagle Boost"],
         items: ["Star Shield", "Eagle Boots", "Mic of Truth"],
-        img: "https://i.ibb.co/QkWKCcM/trump.jpg" // Фотка Дональда Трампа
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnBgDBx95sLqKy0f55I1jW13z6reoYxRTGpRis59x2fiQp6kEbqI8622cCd3TPdVnpNFCC3qq5bkR2UTNQZ5ysNkRtbsL69TacVahtuHH-&s=10" // Ссылка на Трампа
     },
     "Eastern Strategist (RU)": {
         role: "Tank Offlane",
         skills: ["Cold Aura", "Long Plan", "Wall Strategy"],
         items: ["Iron Plate", "Winter Boots", "Strategic Heart"],
-        img: "https://i.ibb.co/hK9pYt0/putin.jpg" // Фотка Владимира Путина
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnBgDBx95sLqKy0f55I1jW13z6reoYxRTGpRis59x2fiQp6kEbqI8622cCd3TPdVnpNFCC3qq5bkR2UTNQZ5ysNkRtbsL69TacVahtuHH-&s=10" // Ссылка на Путина
     },
     "Blue Unity Hero (UA)": {
         role: "Support Mid",
@@ -240,7 +240,7 @@ const heroes = {
         role: "Jungle Boss",
         skills: ["Silent Rule", "Missile Threat", "Fear Aura"],
         items: ["Red Button (fake)", "Dark Boots", "Frozen Core"],
-        img: "https://i.ibb.co/gSTCg3P/kim.jpg" // Фотка Ким Чен Ына
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnBgDBx95sLqKy0f55I1jW13z6reoYxRTGpRis59x2fiQp6kEbqI8622cCd3TPdVnpNFCC3qq5bkR2UTNQZ5ysNkRtbsL69TacVahtuHH-&s=10" // Ссылка на Ким Чен Ына
     }
 };
 
@@ -251,7 +251,7 @@ function createHero(name){
     const h = heroes[name];
     let imgSrc = "";
 
-    if (h.img.startsWith("http")) {
+    if (h.img.startsWith("http") || h.img.startsWith("data:")) {
         imgSrc = h.img;
     } else {
         imgSrc = `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/${h.img}.png`;
@@ -286,7 +286,6 @@ Object.keys(heroes).forEach(name => {
     const hero = createHero(name);
     const role = heroes[name].role;
 
-    // Распределяем по контейнерам с учетом новых кастомных ролей
     if (role.includes("Carry")) {
         carry.appendChild(hero);
     } else if (role.includes("Mid")) {
