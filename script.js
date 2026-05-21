@@ -15,7 +15,7 @@ items:["Battle Fury","Desolator","Abyssal Blade"]
 "Anti-Mage": {
 role:"Carry",
 skills:["Mana Break","Blink","Mana Void"],
-items:["Battle Fury","Manta Style","Skadi"]
+items:["Battle Fury","Manta","Skadi"]
 },
 
 "Faceless Void": {
@@ -171,32 +171,64 @@ items:["Solar Crest","Lotus","BKB"]
 // 😂 MEME HEROES
 "Papich": {
 role:"AFK Carry",
-skills:["Farm 60 min","Tilt team","EZ game"],
+skills:["Farm 60 min","EZ game","Tilt team"],
 items:["Battle Fury","Manta","Shadow Blade"]
 },
 
 "Old God": {
-role:"Mid Legend",
+role:"Mid Genius",
 skills:["Smurf IQ","One shot","Mind control"],
 items:["Blink","Daedalus","Refresher"]
 },
 
-"322 Analyst": {
-role:"Support Ruiner",
-skills:["Strange build","Throw game","Report team"],
-items:["Midas","Aghanim","Force Staff"]
-},
-
 "AFK Jungle Spirit": {
 role:"Hidden Carry",
-skills:["Farm jungle","Never join fight","Scale forever"],
+skills:["Farm jungle","No fights","Scale late"],
 items:["Battle Fury","Skadi","Satanic"]
 },
 
 "Global Pause Master": {
-role:"Meme Support",
-skills:["Pause abuse","Tilt enemy","GG call early"],
+role:"Support Troll",
+skills:["Pause abuse","Tilt enemy","GG early"],
 items:["Blink","Force Staff","Wind Waker"]
+},
+
+"322 Analyst": {
+role:"Support Thrower",
+skills:["Strange build","Throw game","Report team"],
+items:["Midas","Aghanim","Greaves"]
+},
+
+// 🧠 NURLAN
+"Нурланов Сасур": {
+role:"Kazakh Boss",
+skills:["Казахский разнос","AirWave","VIP Aura","Воздухан","MAX Удар"],
+items:["VIP Казаха","Воздухан","Boots of Respect","BKB","Aghanim AirLines"]
+},
+
+// 😂 MEME PRESIDENTS (FICTIONAL)
+"Captain Freedom (USA)": {
+role:"Global Carry",
+skills:["Freedom Strike","Press Ult","Eagle Boost"],
+items:["Star Shield","Eagle Boots","Mic of Truth"]
+},
+
+"Eastern Strategist (RU)": {
+role:"Tank Offlane",
+skills:["Cold Aura","Long Plan","Wall Strategy"],
+items:["Iron Plate","Winter Boots","Strategic Heart"]
+},
+
+"Blue Unity Hero (UA)": {
+role:"Support Mid",
+skills:["Hope Wave","Unity Pulse","Defense Ult"],
+items:["Blue Shield","Peace Staff","Boots of Hope"]
+},
+
+"Frozen Commander (Korea)": {
+role:"Jungle Boss",
+skills:["Silent Rule","Missile Threat","Fear Aura"],
+items:["Red Button (fake)","Dark Boots","Frozen Core"]
 }
 
 };
@@ -236,8 +268,7 @@ document.getElementById("panel").innerHTML = `
 
 }
 
-// ===== render into columns =====
-
+// render
 Object.keys(heroes).forEach(name => {
 
 const hero = createHero(name);
