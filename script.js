@@ -48,7 +48,7 @@ const heroes = {
         role: "Mid",
         skills: ["Raze", "Necromastery", "Requiem"],
         items: ["BKB", "Daedalus", "Shadow Blade"],
-        img: "nevermore" // В Стиме СФ называется nevermore
+        img: "nevermore"
     },
     "Storm Spirit": {
         role: "Mid",
@@ -110,7 +110,7 @@ const heroes = {
         role: "Offlane",
         skills: ["Firestorm", "Pit", "Dark Rift"],
         items: ["Greaves", "Pipe", "Shiva"],
-        img: "abyssal_underlord" // В Стиме он abyssal_underlord
+        img: "abyssal_underlord"
     },
 
     // --- SUPPORT ---
@@ -182,19 +182,19 @@ const heroes = {
         role: "AFK Carry",
         skills: ["Farm 60 min", "EZ game", "Tilt team"],
         items: ["Battle Fury", "Manta", "Shadow Blade"],
-        img: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=150&auto=format&fit=crop&q=60" 
+        img: "https://i.ibb.co/Vv0FmNn/papich.jpg" // Фотка Папича
     },
     "Old God": {
         role: "Mid Genius",
         skills: ["Smurf IQ", "One shot", "Mind control"],
         items: ["Blink", "Daedalus", "Refresher"],
-        img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=150&auto=format&fit=crop&q=60"
+        img: "https://i.ibb.co/9h7K4r1/oldgod.jpg" // Фотка Старого Бога
     },
     "AFK Jungle Spirit": {
         role: "Hidden Carry",
         skills: ["Farm jungle", "No fights", "Scale late"],
         items: ["Battle Fury", "Skadi", "Satanic"],
-        img: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=150&auto=format&fit=crop&q=60"
+        img: "https://i.ibb.co/68032Sm/leshnichel.jpg" // Фотка Лешничка
     },
     "Global Pause Master": {
         role: "Support Troll",
@@ -217,18 +217,18 @@ const heroes = {
         img: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=150&auto=format&fit=crop&q=60"
     },
 
-    // 😂 MEME PRESIDENTS (FICTIONAL)
+    // 😂 MEME PRESIDENTS
     "Captain Freedom (USA)": {
         role: "Global Carry",
         skills: ["Freedom Strike", "Press Ult", "Eagle Boost"],
         items: ["Star Shield", "Eagle Boots", "Mic of Truth"],
-        img: "https://images.unsplash.com/photo-1508612761958-e931d843bdd5?w=150&auto=format&fit=crop&q=60"
+        img: "https://i.ibb.co/QkWKCcM/trump.jpg" // Фотка Дональда Трампа
     },
     "Eastern Strategist (RU)": {
         role: "Tank Offlane",
         skills: ["Cold Aura", "Long Plan", "Wall Strategy"],
         items: ["Iron Plate", "Winter Boots", "Strategic Heart"],
-        img: "https://images.unsplash.com/photo-1520038410233-7141be7e6f97?w=150&auto=format&fit=crop&q=60"
+        img: "https://i.ibb.co/hK9pYt0/putin.jpg" // Фотка Владимира Путина
     },
     "Blue Unity Hero (UA)": {
         role: "Support Mid",
@@ -240,7 +240,7 @@ const heroes = {
         role: "Jungle Boss",
         skills: ["Silent Rule", "Missile Threat", "Fear Aura"],
         items: ["Red Button (fake)", "Dark Boots", "Frozen Core"],
-        img: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=150&auto=format&fit=crop&q=60"
+        img: "https://i.ibb.co/gSTCg3P/kim.jpg" // Фотка Ким Чен Ына
     }
 };
 
@@ -251,14 +251,12 @@ function createHero(name){
     const h = heroes[name];
     let imgSrc = "";
 
-    // Проверяем: если ссылка начинается с http, то это фан-герой. Если нет — берем со Стима
     if (h.img.startsWith("http")) {
         imgSrc = h.img;
     } else {
         imgSrc = `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/${h.img}.png`;
     }
 
-    // Добавил onerror — если картинка не загрузится, будет аккуратная серая заглушка
     el.innerHTML = `
         <img src="${imgSrc}" alt="${name}" onerror="this.src='https://via.placeholder.com/120x68/444/fff?text=No+Img'">
         <b>${name}</b>
@@ -288,11 +286,16 @@ Object.keys(heroes).forEach(name => {
     const hero = createHero(name);
     const role = heroes[name].role;
 
-    // Распределяем по контейнерам
-    if (role.includes("Carry")) carry.appendChild(hero);
-    else if (role.includes("Mid")) mid.appendChild(hero);
-    else if (role.includes("Offlane")) offlane.appendChild(hero);
-    // Роумеров (Пудж, СБ) закидываем к саппортам, чтобы не ломался скрипт
-    else if (role.includes("Support") || role.includes("Roam")) support.appendChild(hero);
-    else meme.appendChild(hero);
+    // Распределяем по контейнерам с учетом новых кастомных ролей
+    if (role.includes("Carry")) {
+        carry.appendChild(hero);
+    } else if (role.includes("Mid")) {
+        mid.appendChild(hero);
+    } else if (role.includes("Offlane")) {
+        offlane.appendChild(hero);
+    } else if (role.includes("Support") || role.includes("Roam")) {
+        support.appendChild(hero);
+    } else {
+        meme.appendChild(hero);
+    }
 });
